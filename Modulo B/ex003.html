@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Manipulaçao de dados aula 3</title>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script>
+      var n1 = Number(window.prompt("Digite o primeiro número?")); //string
+      var n2 = Number(window.prompt("Digite o segundo número?")); //string
+      var r = n1 + n2; //tem que converter string pra numero para nao concatenar as variaveis, e sim somar. no JS o somar com + so funciona se tiver numero + numero
+      // window.alert(r);
+      // window.alert("aqui virou String: " + String(r));
+      window.alert(`a soma de ${n1} com ${n2} é ${r}`); //utilizando aqui o placeholder de js com as aspas de crase
+    </script>
+  </body>
+</html>

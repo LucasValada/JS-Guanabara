@@ -1,0 +1,250 @@
+fundamentos do js
+modo gráfico no navegador para testes 
+básico do node.js
+
+o que o javascript faz?
+
+clientXserver:
+clients - o que precisa de um dado do servidor
+servidor - armazena e envia os arquivos 
+
+existe tecnologia de server e clients. o js é um clientSide mas tbm serve pra servidores 
+
+tecnologia de um website client:
+  - designer (css)
+  - programador (js)
+  - publicador de conteudo (html)
+
+quem usa?
+google
+yt 
+gov 
+netflix 
+linkedln 
+facebook
+
+
+AULA 02- Como chegamos até aqui?
+js e java - nao sao a mesma coisa 
+linha do tempo - 
+DARPA (centro de pesquisa em tecnologia para guerras em 1970 by russia)
+rede de proteção para comunicação sigilosa (arpanet) e depois INTERNET 
+1993 - WWW, html e http & tcp/ip pela CERN > primeiro browser criado (mosaic)
+94 - NextScape 
+95 - Criação da linguagem mocka e java
+mocka se torna javascript, java pelo sucesso do java. elas nao sao iguais. as duas se baseam na linguagem (c)
+outro navegador - internet explorer pela microsoft 
+97 - NextScape procura uma empresa de padronização de linguagem, a ECMA.
+a Ecma é a linguagem JS padronizada.
+2002 - NextScape faliu pela microsoft, onde depois fundaram o mozila firefox.
+2008 - Google 
+2009 - Criação da V8 onde dava pra rodar o motor do chrome que era codigo aberto, pra algo externo do navegador 
+2010 - nodejs
+
+Ferramentas>
+jquery 
+angular (mais parecido com sql)
+react
+react native (aplicaçoes pra celular)
+vue
+electron 
+ionic (sdk para dispositivos moveis)
+cordova 
+
+Gaming>
+phaser 
+pixijs
+impact 
+melon.js
+
+
+Aula 03 - Dando os primeiros passos:
+processos de aprendizagem:
+prática e exercicios 
+aprender com erros 
+nao ficar so assistindo os videos 
+
+primeiros passos:
+ler conteudos de referencia 
+ler a documentaçao da linguagem 
+anotaçoes 
+interagir com outras pessoas sobre (trabalho) ou fazer o curso com outra pessoa 
+
+Bibliografia>
+JS o guia definitivo 
+JS guia do programador 
+ECMA documentaçao 
+
+Aula 04 - Criando o primeiro script
+Modulo A 
+
+Aula 05 - Variaveis e tipos de dados:
+Modulo B 
+
+Variaveis - são espaços alocados na memoria com um valor, seja numero, texto ou alguma funçao.
+= recebe
+== similar 
+=== igual 
+null (vazio)
+n1 = 5
+n2 = 10 
+n3 = 20
+
+s1 = 'curso'
+s2= 'em'
+s3 = 'video'
+
+identificadores>
+podem começar com letra, $ ou _
+NÃO podem começar com número 
+É possível usar letras e numeros
+É possível usar acentos e símbolos 
+NÃO pode contar espaço
+NÃO pode ser uma palavra já reservada do JS, Exemplo var = var;
+
+Dicas>
+Maiusculas e minusculas fazem a diferença 
+tente escolher nomes que fazem sentido pro que voce precisa, nome, salario, idade, etc.
+
+Data types (typeof)
+string 
+number 
+  infinity 
+  NaN
+boolean
+  -true
+  -false
+null
+undefinied
+object
+  -array 
+  -vetores
+function (tipo primitivo)
+
+Aula 6 – Tratamento de dados 
+
++ serve para concatenação 
+Number.parseInt (faz a conversao de um numero pra um numero inteiro)
+Number.parseFloat (numeros reais)
+o atual js suporta apenas o Number para fazer essa validação de string pra numero.
+o mesmo serve de numero pra string, usando o String(variavel)
+ou variavel.toString()
+
+formatando String
+> var s = 'JavaScript'
+undefined
+> s
+'JavaScript'
+> 'eu estou estudando s'
+'eu estou estudando s'
+> 'eu estou estudando ' + s
+'eu estou estudando JavaScript'
+>
+> nome = 'Lucas'
+'Lucas'
+> idade = 23
+23
+> nota = 5.5
+5.5
+> nome
+'Lucas'
+> idade
+23
+> nota
+5.5
+> 'O aluno ' + nome + ' de idade ' + idade + ' anos' + ' obteve uma nota de ' + nota
+'O aluno Lucas de idade 23 anos obteve uma nota de 5.5'
+> 'O aluno ' + nome + ' de idade de ' + idade + ' anos' + ' obteve uma nota de ' + nota
+'O aluno Lucas de idade de 23 anos obteve uma nota de 5.5'
+>
+
+agora com template String> 
+> `o Aluno ${nome}, com a idade de ${idade}, obteve uma nota de ${nota}`
+'o Aluno Lucas, com a idade de 23, obteve uma nota de 5.5'
+
+
+${} -> isso é um placeholder em JS
+
+var s = 'javascript'
+s.length //quantos caracteres a string tem 
+s,toUpperCase() //tudo pra maiusculo 
+s.toLowerCase() //tudo pra minusculo 
+
+> n1
+1545.5
+> n1.toFixed(2)
+'1545.50'
+> n1.toFixed(2).replace('.', ',')
+'1545,50'
+> n1.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})
+'R$ 1.545,50'
+>
+
+
+Aula 07 - Operadores:
+
+aritméticos:
+  +
+  -
+  *
+  /
+  % <- resto da divisao inteira. exemplo 5%2 = 1 (resto da divisao)
+  ** <- potencia. exemplo 5**2 = 25
+atribuição 
+  simples:
+    var A = 5+3 = 8 
+    var B = a % 5 = 4
+    var C = 5 * b ** 2 = 45 
+    var D = 10 - a / 2 = 6
+    var E = 6 * 2 / d = 2
+    var F = b % e + 4 / e = 3 
+relacionais 
+lógicos 
+ternários 
+
+
+cuidado com a precendia de operadores (a ordem altera o produto)
+exemplo> 5 + 3 / 2 = 6.5 
+> 5 + 2
+7
+> 9% 2
+1
+> 9 / 2
+4.5
+> 5 + 3 /2
+6.5
+> 5 + / 2
+5 + / 2
+    ^
+
+Uncaught SyntaxError: Invalid regular expression: missing /
+> (5 + 3) / 2
+4
+
+Prioridade das ordens de precendencia no JavaScript
+() 
+**
+* / % <- da esquerda pra direita 
++ - 
+  simples:
+    var A = 5+3 = 8 
+    var B = a % 5 = 4
+    var C = 5 * b ** 2 = 45 
+    var D = 10 - a / 2 = 6
+    var E = 6 * 2 / d = 2
+    var F = b % e + 4 / e = 3 
+
+Auto-Atribuiçoes 
+n = 3 
+n = n + 4 (ou seja, 3 = 3 + 4) e agora o novo valor de n é 7
+n = n - 5 = 2 
+n = n * 4 
+n = n / 2
+n = n ** 2 
+n = n % 5 
+
+Incremento:
+ var x = 5 
+ x = x + 1 ou x+=1 ou x++ 
+ x = x - 1 ou x-=1 ou x--
+
