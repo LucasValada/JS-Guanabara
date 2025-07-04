@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>DOM</title>
+    <style>
+      body {
+        background-color: black;
+        color: whitesmoke;
+        font-size: 15px;
+        text-align: center;
+        box-sizing: border-box;
+        box-shadow: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>aqui vai o resultado</p>
+    <p>aprendendo a usar o <strong>DOM</strong></p>
+    <div id="msg">clique em mim</div>
+    <div name="msg" id="element">clique em mim com name</div>
+    <!-- exemplos de hierarquia e filhos:  -->
+    <script>
+      // window.document.writeln("Olá, mundo!");
+      // window.document.writeln(
+      //   window.document.title,
+      //   window.document.characterSet,
+      //   window.navigator.appName,
+      //   window.document.URL
+      // );
+      var p1 = window.document.getElementsByTagName("p")[1];
+      var corpo = window.document.body;
+      corpo.style.background = "grey";
+      window.document.write("O elemento esta assim: " + p1.innerHTML); //innerText serve apenas para o elemento de texto, caso queira usar tudo o que esta dentro do elemento html, é o innerHtml
+      p1.style.color = "red";
+      var d = document.getElementById("msg");
+      d.style.background = "green";
+      d.innerText = "Aguardando...";
+      // var name = document.getElementsByName("msg");
+      // name.innerText = "agora com nome";
+      // window.alert(p1.innerText); //nesses casos, o ideal é usar o texto e nao o elemento HTML (innerHTML);
+      var element = document.querySelector("div#element");
+      element.style.background = "purple";
+      element.innerText = "Agora ta roxo com queryselector";
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

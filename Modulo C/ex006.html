@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Eventos DOM</title>
+    <style>
+      #areaDiv {
+        background-color: green;
+        color: white;
+        width: 200px;
+        font-size: 19px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="areaDiv">
+      <!-- <button
+        id="area"
+        onclick="clicar()"
+        onmouseenter="enterr()"
+        onmouseout="fora()"
+      >
+        Interaja...
+      </button> -->
+      <button id="area">Interaja...</button>
+      <!-- chamando aqui os eventos das funçoes de uma outra forma -->
+    </div>
+
+    <script>
+      var area = window.document.getElementById("area"); //essa variavel fica global pra toda função que precisar usar.
+      area.addEventListener("click", clicar);
+      area.addEventListener("mouseenter", enterr);
+      area.addEventListener("mouseout", fora);
+      function clicar() {
+        //tudo que esta aqui dentro so vai ser executado quando chamar o evento de clicar em algum lugar
+        area.innerText = "funçao de clique aqui";
+        area.style.background = "red";
+      }
+      function enterr() {
+        area.innerText = "Dentro";
+        area.style.background = "blue";
+      }
+      function fora() {
+        area.innerText = "Fora";
+        area.style.background = "pink";
+      }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

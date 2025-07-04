@@ -248,3 +248,158 @@ Incremento:
  x = x + 1 ou x+=1 ou x++ 
  x = x - 1 ou x-=1 ou x--
 
+Aula 8 - Operadores parte 2 
+Operadores Relacionais:
+  > 
+  <
+  > = 
+  < = 
+  == 
+  != 
+Toda expressao que tenha um operador relacionado ligado a ela, o resultado vai ser o valor booleano. Ou seja:
+5>2 = true 
+5<2 = false 
+8>= 8 = true 
+9<= 7 = false 
+5 == 5 = true 
+4 != 4 = false 
+
+Operadores de identidade: 
+5 == 5 = true
+5 == '5' = true (o sinal de igualdade nao compara o tipo)
+5 === '5' = false (aqui ele ve se é o mesmo valor, e o mesmo tipo, o == é semelhante)
+5 === 5 = true (mesmo tipo e mesmo valor)
+
+Operadores Lógicos (na ordem de prioridade):
+! <- negação :
+  operador unário, so tem ele operando, ou eu coloco true ou false. exemplo !true = false || !false = true.
+&& <- conjunção , SE
+  é um operador binário &(true true false false) & (true false true false), ou seja: se 
+  true = true = true
+  true = false = false
+  false = true = false 
+  false = false = false 
+|| <- disjunção , OU 
+  é um operador binário tambem, mas se um dos valores for verdadeiro, já basta pra ser true, exemplo>
+  true = true = true 
+  true = false = true 
+  false = true = true 
+  false = false = false 
+
+Na expressão 
+var a = 5 
+var b = 8 
+a > b && b % 2 == 0
+(a ordem de execução é os aritméticos, relacionais e depois os logicos)
+
+> a > b && b % 2 ==0
+false
+
+> a <= b || b / 2 == 2
+true
+
+Operadores ternários:
+?
+:
+teste ? true : false 
+média >= 7 ? 'aprovado' : 'reprovado'
+> media > 7? "aprovado" : "reprovado"
+'reprovado'
+> media += 3
+8.5
+> var x = 8
+undefined
+> var res = x % 2 == 0 ? 5:9
+undefined
+> x + res
+13
+> var idade = 19
+undefined
+> var r = idade >= 18? "maior": "menor"
+undefined
+> r
+'maior'
+
+Modulo C - Conhecendo o DOM 
+DOCUMENT OBCJECT MODEL 
+é um conjunto de objetos do JavaScript
+Árvore DOM:
+  window (dentro do window, possui alguns objetos, como:)
+    location (qual a pagina atual, qual é a url, qual é a pagina anterior)
+    document (documento atual)
+      -html
+        -head 
+          recebe elementos de title, meta, utf, referencias de css e etc.
+        -body
+          recebe elementos html como, p, h1, h2, div, etc.
+    history (guarda de onde eu vim, e pra onde eu vou e ajuda na navegação dentro do site)
+Manipulando DOM 
+o dom nao funciona no node js por exemplo, porque ele so trabalha com elementos visuais da web 
+Selecionando um elemento>
+por Marca 
+  -getElementByTagName('') (eu posso selecionar mais de um objeto do mesmo tipo com esse tagname), por exemplo o <p>
+por ID 
+  -getElementById(#id)
+por Nome 
+  -getElementByName()
+  -getElementByNameNS()
+por Classe 
+  -getElementByClassName()
+por Seletor 
+  -querySelector()
+  -querySelectorAll()
+JavaScript começa do 0 a sua contagem.
+innerText (pega o elemento filho sem a formataçao)
+innerHTML (usa a formataçao html do campo)
+
+EVENTOS DOM 
+Eventos sao coisas que eu posso fazer com algum elemento 
+são muitos, esses sao exemplos de disparo no evento do mouse:
+mouseenter
+mousemove
+mousedown
+mouseup
+click
+mouseout
+
+Função em JavaScript:
+é um conjunto de códigos que sao executadas SÓ quando o evento ocorrer.
+colocamos as funçoes eu um bloco, que é represetando por function ação(parametro){}
+
+
+Modulo D:
+
+Condições simples
+Condições compostas (if else)
+Condições aninhadas (elseif)
+Condições multiplas 
+Exercicios 
+
+Aula 11 – Condições
+
+Sequencias (tem que executar na ordem, exemplo:
+n = 3 
+n += 2
+alert(n))
+//nao tem como fazer de outra ordem 
+
+
+Condições - bloco de if e else:
+if (condição){
+  true 
+}else{
+  false 
+}
+
+Tipos de condição:
+if (condição){                    
+  true                                
+}                           
+condição simples ^
+
+
+if (condição){
+  true 
+}else{
+  false 
+}
