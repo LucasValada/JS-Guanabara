@@ -26,8 +26,14 @@
       function calcular() {
         var res = document.querySelector("div#res");
         var vel = Number(txtv.value);
-        res.innerHTML = `sua velocidade é de <strong> ${vel}Km/h </strong>`;
-        res.innerHTML += `Diriga sempre com cuidado, e use cinto de segurança!`;
+        if(vel > 80){
+        res.innerHTML = `sua velocidade é de <strong> ${vel}Km/h </strong> <br>`;
+          res.innerHTML += `Você foi multado, sua velocidade foi de ${vel}Km/h, ultrapassando o limite de 80Km/h.`
+        }
+        else{
+          res.innerHTML = `sua velocidade é de <strong> ${vel}Km/h </strong> <br>`;
+          res.innerHTML += 'sua velocidade está abaixo do limite, continue assim!'
+        }
       }
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
