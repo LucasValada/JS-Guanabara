@@ -433,3 +433,31 @@ switch (expressao){
 
   default // quando nenhumar valor dos casos bate, ele executa isso, como se fosse o ELSE
 }
+
+
+Aula 13 – Repetições:
+  -Estrutura de sequencia:
+function comerPizza(){
+  comerFatia()
+  comerFatia()
+  comerFatia()
+  comerFatia()
+  comerFatia()
+  comerFatia()
+  comerFatia()
+  comerFatia()
+} 
+
+Repetições: (se for verdadeiro, ele volta pro ponto inicial e entra em um loop, depois que for false, termina o fluxo)
+while(condição){
+}
+
+function comerPizza(){
+  while (temFatia()){
+    comerFatia()
+  }
+}
+
+do{
+
+} while (condição)
