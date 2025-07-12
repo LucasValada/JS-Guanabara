@@ -461,3 +461,19 @@ function comerPizza(){
 do{
 
 } while (condição)
+
+Repetições em javascript PARTE 2:
+
+estrutura de repetição com variavel de controle 
+for (inicio ; teste ; icremento){
+
+} se for verdadeiro, ele repete a estrutura ate ser falso e sair do bloco 
+Exemplo:
+var c = 1
+while(c<=10>){
+  c++
+}
+
+for (var c =1; c<=10; c++){
+  
+}
