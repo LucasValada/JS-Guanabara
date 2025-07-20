@@ -1,0 +1,479 @@
+fundamentos do js
+modo gráfico no navegador para testes 
+básico do node.js
+
+o que o javascript faz?
+
+clientXserver:
+clients - o que precisa de um dado do servidor
+servidor - armazena e envia os arquivos 
+
+existe tecnologia de server e clients. o js é um clientSide mas tbm serve pra servidores 
+
+tecnologia de um website client:
+  - designer (css)
+  - programador (js)
+  - publicador de conteudo (html)
+
+quem usa?
+google
+yt 
+gov 
+netflix 
+linkedln 
+facebook
+
+
+AULA 02- Como chegamos até aqui?
+js e java - nao sao a mesma coisa 
+linha do tempo - 
+DARPA (centro de pesquisa em tecnologia para guerras em 1970 by russia)
+rede de proteção para comunicação sigilosa (arpanet) e depois INTERNET 
+1993 - WWW, html e http & tcp/ip pela CERN > primeiro browser criado (mosaic)
+94 - NextScape 
+95 - Criação da linguagem mocka e java
+mocka se torna javascript, java pelo sucesso do java. elas nao sao iguais. as duas se baseam na linguagem (c)
+outro navegador - internet explorer pela microsoft 
+97 - NextScape procura uma empresa de padronização de linguagem, a ECMA.
+a Ecma é a linguagem JS padronizada.
+2002 - NextScape faliu pela microsoft, onde depois fundaram o mozila firefox.
+2008 - Google 
+2009 - Criação da V8 onde dava pra rodar o motor do chrome que era codigo aberto, pra algo externo do navegador 
+2010 - nodejs
+
+Ferramentas>
+jquery 
+angular (mais parecido com sql)
+react
+react native (aplicaçoes pra celular)
+vue
+electron 
+ionic (sdk para dispositivos moveis)
+cordova 
+
+Gaming>
+phaser 
+pixijs
+impact 
+melon.js
+
+
+Aula 03 - Dando os primeiros passos:
+processos de aprendizagem:
+prática e exercicios 
+aprender com erros 
+nao ficar so assistindo os videos 
+
+primeiros passos:
+ler conteudos de referencia 
+ler a documentaçao da linguagem 
+anotaçoes 
+interagir com outras pessoas sobre (trabalho) ou fazer o curso com outra pessoa 
+
+Bibliografia>
+JS o guia definitivo 
+JS guia do programador 
+ECMA documentaçao 
+
+Aula 04 - Criando o primeiro script
+Modulo A 
+
+Aula 05 - Variaveis e tipos de dados:
+Modulo B 
+
+Variaveis - são espaços alocados na memoria com um valor, seja numero, texto ou alguma funçao.
+= recebe
+== similar 
+=== igual 
+null (vazio)
+n1 = 5
+n2 = 10 
+n3 = 20
+
+s1 = 'curso'
+s2= 'em'
+s3 = 'video'
+
+identificadores>
+podem começar com letra, $ ou _
+NÃO podem começar com número 
+É possível usar letras e numeros
+É possível usar acentos e símbolos 
+NÃO pode contar espaço
+NÃO pode ser uma palavra já reservada do JS, Exemplo var = var;
+
+Dicas>
+Maiusculas e minusculas fazem a diferença 
+tente escolher nomes que fazem sentido pro que voce precisa, nome, salario, idade, etc.
+
+Data types (typeof)
+string 
+number 
+  infinity 
+  NaN
+boolean
+  -true
+  -false
+null
+undefinied
+object
+  -array 
+  -vetores
+function (tipo primitivo)
+
+Aula 6 – Tratamento de dados 
+
++ serve para concatenação 
+Number.parseInt (faz a conversao de um numero pra um numero inteiro)
+Number.parseFloat (numeros reais)
+o atual js suporta apenas o Number para fazer essa validação de string pra numero.
+o mesmo serve de numero pra string, usando o String(variavel)
+ou variavel.toString()
+
+formatando String
+> var s = 'JavaScript'
+undefined
+> s
+'JavaScript'
+> 'eu estou estudando s'
+'eu estou estudando s'
+> 'eu estou estudando ' + s
+'eu estou estudando JavaScript'
+>
+> nome = 'Lucas'
+'Lucas'
+> idade = 23
+23
+> nota = 5.5
+5.5
+> nome
+'Lucas'
+> idade
+23
+> nota
+5.5
+> 'O aluno ' + nome + ' de idade ' + idade + ' anos' + ' obteve uma nota de ' + nota
+'O aluno Lucas de idade 23 anos obteve uma nota de 5.5'
+> 'O aluno ' + nome + ' de idade de ' + idade + ' anos' + ' obteve uma nota de ' + nota
+'O aluno Lucas de idade de 23 anos obteve uma nota de 5.5'
+>
+
+agora com template String> 
+> `o Aluno ${nome}, com a idade de ${idade}, obteve uma nota de ${nota}`
+'o Aluno Lucas, com a idade de 23, obteve uma nota de 5.5'
+
+
+${} -> isso é um placeholder em JS
+
+var s = 'javascript'
+s.length //quantos caracteres a string tem 
+s,toUpperCase() //tudo pra maiusculo 
+s.toLowerCase() //tudo pra minusculo 
+
+> n1
+1545.5
+> n1.toFixed(2)
+'1545.50'
+> n1.toFixed(2).replace('.', ',')
+'1545,50'
+> n1.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})
+'R$ 1.545,50'
+>
+
+
+Aula 07 - Operadores:
+
+aritméticos:
+  +
+  -
+  *
+  /
+  % <- resto da divisao inteira. exemplo 5%2 = 1 (resto da divisao)
+  ** <- potencia. exemplo 5**2 = 25
+atribuição 
+  simples:
+    var A = 5+3 = 8 
+    var B = a % 5 = 4
+    var C = 5 * b ** 2 = 45 
+    var D = 10 - a / 2 = 6
+    var E = 6 * 2 / d = 2
+    var F = b % e + 4 / e = 3 
+relacionais 
+lógicos 
+ternários 
+
+
+cuidado com a precendia de operadores (a ordem altera o produto)
+exemplo> 5 + 3 / 2 = 6.5 
+> 5 + 2
+7
+> 9% 2
+1
+> 9 / 2
+4.5
+> 5 + 3 /2
+6.5
+> 5 + / 2
+5 + / 2
+    ^
+
+Uncaught SyntaxError: Invalid regular expression: missing /
+> (5 + 3) / 2
+4
+
+Prioridade das ordens de precendencia no JavaScript
+() 
+**
+* / % <- da esquerda pra direita 
++ - 
+  simples:
+    var A = 5+3 = 8 
+    var B = a % 5 = 4
+    var C = 5 * b ** 2 = 45 
+    var D = 10 - a / 2 = 6
+    var E = 6 * 2 / d = 2
+    var F = b % e + 4 / e = 3 
+
+Auto-Atribuiçoes 
+n = 3 
+n = n + 4 (ou seja, 3 = 3 + 4) e agora o novo valor de n é 7
+n = n - 5 = 2 
+n = n * 4 
+n = n / 2
+n = n ** 2 
+n = n % 5 
+
+Incremento:
+ var x = 5 
+ x = x + 1 ou x+=1 ou x++ 
+ x = x - 1 ou x-=1 ou x--
+
+Aula 8 - Operadores parte 2 
+Operadores Relacionais:
+  > 
+  <
+  > = 
+  < = 
+  == 
+  != 
+Toda expressao que tenha um operador relacionado ligado a ela, o resultado vai ser o valor booleano. Ou seja:
+5>2 = true 
+5<2 = false 
+8>= 8 = true 
+9<= 7 = false 
+5 == 5 = true 
+4 != 4 = false 
+
+Operadores de identidade: 
+5 == 5 = true
+5 == '5' = true (o sinal de igualdade nao compara o tipo)
+5 === '5' = false (aqui ele ve se é o mesmo valor, e o mesmo tipo, o == é semelhante)
+5 === 5 = true (mesmo tipo e mesmo valor)
+
+Operadores Lógicos (na ordem de prioridade):
+! <- negação :
+  operador unário, so tem ele operando, ou eu coloco true ou false. exemplo !true = false || !false = true.
+&& <- conjunção , SE
+  é um operador binário &(true true false false) & (true false true false), ou seja: se 
+  true = true = true
+  true = false = false
+  false = true = false 
+  false = false = false 
+|| <- disjunção , OU 
+  é um operador binário tambem, mas se um dos valores for verdadeiro, já basta pra ser true, exemplo>
+  true = true = true 
+  true = false = true 
+  false = true = true 
+  false = false = false 
+
+Na expressão 
+var a = 5 
+var b = 8 
+a > b && b % 2 == 0
+(a ordem de execução é os aritméticos, relacionais e depois os logicos)
+
+> a > b && b % 2 ==0
+false
+
+> a <= b || b / 2 == 2
+true
+
+Operadores ternários:
+?
+:
+teste ? true : false 
+média >= 7 ? 'aprovado' : 'reprovado'
+> media > 7? "aprovado" : "reprovado"
+'reprovado'
+> media += 3
+8.5
+> var x = 8
+undefined
+> var res = x % 2 == 0 ? 5:9
+undefined
+> x + res
+13
+> var idade = 19
+undefined
+> var r = idade >= 18? "maior": "menor"
+undefined
+> r
+'maior'
+
+Modulo C - Conhecendo o DOM 
+DOCUMENT OBCJECT MODEL 
+é um conjunto de objetos do JavaScript
+Árvore DOM:
+  window (dentro do window, possui alguns objetos, como:)
+    location (qual a pagina atual, qual é a url, qual é a pagina anterior)
+    document (documento atual)
+      -html
+        -head 
+          recebe elementos de title, meta, utf, referencias de css e etc.
+        -body
+          recebe elementos html como, p, h1, h2, div, etc.
+    history (guarda de onde eu vim, e pra onde eu vou e ajuda na navegação dentro do site)
+Manipulando DOM 
+o dom nao funciona no node js por exemplo, porque ele so trabalha com elementos visuais da web 
+Selecionando um elemento>
+por Marca 
+  -getElementByTagName('') (eu posso selecionar mais de um objeto do mesmo tipo com esse tagname), por exemplo o <p>
+por ID 
+  -getElementById(#id)
+por Nome 
+  -getElementByName()
+  -getElementByNameNS()
+por Classe 
+  -getElementByClassName()
+por Seletor 
+  -querySelector()
+  -querySelectorAll()
+JavaScript começa do 0 a sua contagem.
+innerText (pega o elemento filho sem a formataçao)
+innerHTML (usa a formataçao html do campo)
+
+EVENTOS DOM 
+Eventos sao coisas que eu posso fazer com algum elemento 
+são muitos, esses sao exemplos de disparo no evento do mouse:
+mouseenter
+mousemove
+mousedown
+mouseup
+click
+mouseout
+
+Função em JavaScript:
+é um conjunto de códigos que sao executadas SÓ quando o evento ocorrer.
+colocamos as funçoes eu um bloco, que é represetando por function ação(parametro){}
+
+
+Modulo D:
+
+Condições simples
+Condições compostas (if else)
+Condições aninhadas (elseif)
+Condições multiplas 
+Exercicios 
+
+Aula 11 – Condições
+
+Sequencias (tem que executar na ordem, exemplo:
+n = 3 
+n += 2
+alert(n))
+//nao tem como fazer de outra ordem 
+
+
+Condições - bloco de if e else:
+if (condição){
+  true 
+}else{
+  false 
+}
+
+Tipos de condição:
+if (condição){                    
+  true                                
+}                           
+condição simples ^
+
+
+if (condição){
+  true 
+}else{
+  false 
+}
+
+Condições aninhadas (varias condiçoes dentro de uma condi só):
+voce pega uma condição composta, e vai colocando outras condiçoes dentro dela:
+elseif 
+
+if (condiçao1){
+  executa bloco 1 
+}
+else{
+  if (condiçao 2){
+    executa bloco 2
+  } else{
+    executa o bloco 3
+  }
+}
+
+Condiçao Multipla (serve para valores fixos)
+alem do sim e nao, ela recebe possibilidade de valores fixos para alterar os blocos
+
+switch (expressao){
+  break//comando obrigatório depois de cada case
+  case 1: 
+    break 
+  case 2: 
+    break
+  case 3:
+    break
+
+  default // quando nenhumar valor dos casos bate, ele executa isso, como se fosse o ELSE
+}
+
+
+Aula 13 – Repetições:
+  -Estrutura de sequencia:
+function comerPizza(){
+  comerFatia()
+  comerFatia()
+  comerFatia()
+  comerFatia()
+  comerFatia()
+  comerFatia()
+  comerFatia()
+  comerFatia()
+} 
+
+Repetições: (se for verdadeiro, ele volta pro ponto inicial e entra em um loop, depois que for false, termina o fluxo)
+while(condição){
+}
+
+function comerPizza(){
+  while (temFatia()){
+    comerFatia()
+  }
+}
+
+do{
+
+} while (condição)
+
+Repetições em javascript PARTE 2:
+
+estrutura de repetição com variavel de controle 
+for (inicio ; teste ; icremento){
+
+} se for verdadeiro, ele repete a estrutura ate ser falso e sair do bloco 
+Exemplo:
+var c = 1
+while(c<=10>){
+  c++
+}
+
+for (var c =1; c<=10; c++){
+  
+}

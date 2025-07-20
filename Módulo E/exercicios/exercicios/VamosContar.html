@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vamos contar</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+      integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+    header {
+      h1 {
+        font-weight: 400;
+        font-size: 42px;
+        padding: 10px 0px;
+        text-align: center;
+      }
+    }
+    .bg-white {
+      background-color: white;
+      border-radius: 80px;
+      display: block;
+      text-align: center;
+
+      p {
+        font-weight: 600;
+        font-size: 22px;
+        padding: 10px 0px;
+      }
+    }
+    footer {
+      text-align: center;
+    }
+  </style>
+  <body>
+    <header>
+      <h1>Vamos Contar</h1>
+    </header>
+    <section>
+      <div class="bg-white">
+        Inicio: <input type="number" name="init" id="init" /> Fim:
+        <input type="number" name="end" id="end" /> Passo:
+        <input type="number" name="step" id="step" />
+        <button
+          onclick="clicar()"
+          id="contar"
+          value="contar"
+          aria-label="contar"
+        >
+          Contar
+        </button>
+        <p id="textv1">Preparando a contagem...</p>
+      </div>
+    </section>
+    <footer>
+      <p>desafio de contagem</p>
+    </footer>
+    <script>
+      function clicar() {
+        var txt = document.getElementById("textv1");
+        var init = document.getElementById("init");
+        var fim = document.getElementById("end");
+        var step = document.getElementById("step");
+
+        var initValue = Number(init.value);
+        var fimCount = Number(fim.value);
+        var stepCount = Number(step.value);
+
+        txt.innerHTML = "Contando: ";
+        if (stepCount === 0 || fimCount === 0 || initValue === 0) {
+          window.alert("ERRO: os campos não podem ser zero!");
+          return;
+        }if(step.value.trim() === '' || fim.value.trim()=== '' || init.value.trim()===''){
+           window.alert("ERRO: os campos não pode estar vazios!");
+          return;
+        }
+        var count = initValue;
+        while (count <= fimCount) {
+          txt.innerHTML += `👻 ${count} `;
+          count += stepCount;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificar idade</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+</head>
+<style>
+    header {
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 700;
+        }
+    }
+
+    .align {
+        display: block;
+
+        p {
+            text-align: center;
+        }
+    }
+
+    .btn-verificar,
+    #res,
+    .imgCenter {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    #imgType {
+        text-align: center;
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Verificador de idade</h1>
+    </header>
+    <section>
+        <div class="align">
+            <p>
+                Ano de nascimento: <input type="number" name="idade" id="idadeInput" min='0' />
+            </p>
+            <p>Sexo: <input type="radio" name="radsex" id="masc">
+                <label for="masc">Masculino</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Feminino</label>
+            </p>
+        </div>
+        <div class="btn-verificar">
+            <input type="button" value="verificar" class="btn-verificar" onclick="verificar()">
+        </div>
+
+        <div id="res">
+            <p>Preencha os dados acima para ver o resultado!</p>
+
+        </div>
+        <div class="imgCenter">
+            <img src="" alt="a" id="imgType">
+        </div>
+
+        <footer>
+            <p>segundo Exercicio</p>
+        </footer>
+        <script>
+            function verificar() {
+                var data = new Date();
+                var anoAtual = data.getFullYear();
+
+                var inputAno = document.getElementById('idadeInput');
+                var res = document.getElementById('res');
+                var img = document.getElementById('imgType');
+                var fano = Number(inputAno.value);
+
+                if (inputAno.value.length === 0 || fano > anoAtual) {
+                    alert('Erro: Data inválida. Verifique e tente novamente.');
+                    return;
+                }
+
+                var idade = anoAtual - fano;
+                var fsex = document.getElementsByName('radsex');
+                var genero = '';
+
+                if (fsex[0].checked) {
+                    genero = 'Homem';
+                    if (idade < 18) {
+                        img.src = 'https://images.pexels.com/photos/4513265/pexels-photo-4513265.jpeg';
+                    } else if (idade >= 55) {
+                        img.src = 'https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg';
+                    } else {
+                        img.src = 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg';
+                    }
+                } else if (fsex[1].checked) {
+                    genero = 'Mulher';
+                    if (idade < 18) {
+                        img.src = 'https://images.pexels.com/photos/1101730/pexels-photo-1101730.jpeg';
+                    } else if (idade >= 55) {
+                        img.src = 'https://images.pexels.com/photos/1729931/pexels-photo-1729931.jpeg';
+                    } else {
+                        img.src = 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg';
+                    }
+                }
+
+                res.innerHTML = `Detectamos ${genero} com ${idade} anos.`;
+            }
+
+        </script>
+</body>
+
+</html>

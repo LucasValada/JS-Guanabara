@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Ex 10</title>
+  </head>
+  <body>
+    <h1>Sistema de multas</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel" />
+    <input type="button" value="verificar" onclick="calcular()" />
+    <div id="res"></div>
+    <script>
+      var txtv = document.getElementById("txtvel");
+      function calcular() {
+        var res = document.querySelector("div#res");
+        var vel = Number(txtv.value);
+        if(vel > 80){
+        res.innerHTML = `sua velocidade é de <strong> ${vel}Km/h </strong> <br>`;
+          res.innerHTML += `Você foi multado, sua velocidade foi de ${vel}Km/h, ultrapassando o limite de 80Km/h.`
+        }
+        else{
+          res.innerHTML = `sua velocidade é de <strong> ${vel}Km/h </strong> <br>`;
+          res.innerHTML += 'sua velocidade está abaixo do limite, continue assim!'
+        }
+      }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
